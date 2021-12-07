@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Header from "../../components/Header";
-import './styles.scss'
+import './styles.scss';
 
 class Registration extends Component {
     render() {
