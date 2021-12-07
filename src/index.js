@@ -1,10 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Homepage from './pages/Homepage';
+import Registration from './pages/Registration'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/registration" element={<Registration />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
